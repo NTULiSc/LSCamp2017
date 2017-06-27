@@ -1,9 +1,11 @@
 .unblur{
 	background: url("./back.png") no-repeat center center;
+	background-attachment: fixed;
 	z-index: -2;
 }
 .blurred{
 	background: url("./back-blurred.png") no-repeat center center;
+	background-attachment: fixed;
 	opacity: 0;
 	z-index: -1;
 }
@@ -55,12 +57,14 @@ body {
 
 /*Score Board*/
 .list-container{
-	width: 100%;
-	height: 350px;
+	width: 50%;
+	height: 200px;
+	display: block;
+	margin: auto;
 }
 .ScoreBoard{
-	width: 50%;
-	height: 350px;
+	width: 100%;
+	height: 200px;
 }
 thead, tbody tr {
     display:table;
@@ -76,15 +80,29 @@ table th{
 	text-align: center;
 }
 .form-group{
-	width: 20%;
+	width: 10%;
 	margin: auto;
 }
 
 .result-container{
-	
+	width: 100%;
+	height: 50px;
+}
+.score-container{
+	width: 100%;
+	height: 50px;
 }
 /*Score Board*/
 
+.form-control{
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+.container{
+	margin-bottom: 10px;
+}
 .btn1 {
     position: relative;
     margin: 0 auto;
@@ -115,7 +133,6 @@ table th{
     top: -.4em;
     height: .8em;
     width: .8em;
-    background: var(--primary);
     border-radius: 1em;
     border: .25em solid var(--solid);
     box-shadow: 0 0 .7em var(--solid),

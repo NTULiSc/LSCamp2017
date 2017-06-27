@@ -61,8 +61,6 @@ function send_ans(){
 
 	document.getElementById("exe_num").value = "";
 	document.getElementById("ans").value = "";
-	show_li=2;
-	show_list();
 
 	if(isNaN(exe_num)){
 		if(exe_num === "RUSHANDYANRU" || exe_num === "RushAndYanRu" || exe_num === "rushandyanru" || exe_num === "RUSH-AND-YAN-RU" || exe_num === "rush-and-yan-ru" || exe_num === "RUSH AND YANRU" || exe_num === "rush and yanru"){
@@ -251,6 +249,7 @@ function send_ans(){
 
 					}
 
+		print_list();
 
 
 			}

@@ -10,25 +10,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<!-- Background -->
 	<div class="back-ground blurred"></div>
 	<div class="back-ground unblur"></div>
+<!-- Background -->
+
+<!-- Jumbo -->
 	<div class="jumbotron vertical-center">
 		<h1>2017 生科營</h1>
 	</div>
+<!-- Jumbo -->
+
 	<div class="paragraph">
 		<h2>Escape The ROOM</h2>
 		<p>超好玩的密室逃脫在這裡～～～</p>
 
 <!-- Screen -->
-		<div>
+		<div class="Screen">
 			<div class="list-container">
 				<div id="list"></div>
 			</div>
 			<div class="result-container">
 				<p id="result"></p>
 			</div>
+			<div class="score-container">
+				<p id="score"></p>
+			</div>
 		</div>
 <!-- Screen -->
+
 		<div>
 			<!-- <div class="">
 				<label class="form-control-label" for="inputSuccess1">題號</label>
@@ -60,16 +70,15 @@
 				</span>
 			</div>
 		</div>
-		<p id="score"></p>
 		<br>
 		<div class="container">	
-			<div class="btn1" id="list_btn" onclick="show_list()">
-				<span>LIST</span>
+			<div class="btn1" id="send" onclick="send_ans()">
+				<span>SEND ANSWER</span>
 				<div class="dot"></div>
 			</div>
 			<br>
-			<div class="btn1" id="send" onclick="send_ans()">
-				<span>SEND ANSWER</span>
+			<div class="btn1" id="list_btn" onclick="show_list()">
+				<span>LIST</span>
 				<div class="dot"></div>
 			</div>
 		</div>
