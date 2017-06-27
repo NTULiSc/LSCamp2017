@@ -26,16 +26,20 @@
 		<p>超好玩的密室逃脫在這裡～～～</p>
 
 <!-- Screen -->
-		<div class="Screen">
-			<div class="list-container">
-				<div id="list"></div>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 Screen">
+				<div class="list-container">
+					<div id="list"></div>
+				</div>
+				<div class="result-container">
+					<p id="result"></p>
+				</div>
+				<div class="score-container">
+					<p id="score"></p>
+				</div>
 			</div>
-			<div class="result-container">
-				<p id="result"></p>
-			</div>
-			<div class="score-container">
-				<p id="score"></p>
-			</div>
+			<div class="col-md-2"></div>
 		</div>
 <!-- Screen -->
 
@@ -71,23 +75,23 @@
 			</div>
 		</div>
 		<br>
-		<div class="row">
-  			<div class="col-sm-2">2</div>
-  			<div class="col-sm-3">
+		<div class="row button">
+  			<div class="col-md-2"></div>
+  			<div class="col-md-3">
   				<div class="btn1" id="send" onclick="send_ans()">
-					<span>SEND ANSWER</span>
+					<span>提交答案</span>
 					<div class="dot"></div>
 				</div>
   			</div>
-  			<div class="col-sm-1">1</div>
-  			<div class="col-sm-1">1</div>
-  			<div class="col-sm-3">
+  			<div class="col-md-1"></div>
+  			<div class="col-md-1"></div>
+  			<div class="col-md-3">
   				<div class="btn1" id="list_btn" onclick="show_list()">
-					<span>LIST</span>
+					<span>計分板</span>
 					<div class="dot"></div>
 				</div>
   			</div>
-  			<div class="col-sm-2">2</div>
+  			<div class="col-md-2"></div>
 		</div>
 		<!-- <div class="container">	
 			<div class="btn1" id="send" onclick="send_ans()">
