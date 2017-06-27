@@ -78,8 +78,8 @@ function send_ans(){
 	}
 	else{
 		exe_num=exe_num-1;
-		if(exe_num<0 || exe_num>12){
-			document.getElementById("result").innerHTML = "輸入題號不在範圍內呦!";
+		if(exe_num<0){
+			document.getElementById("result").innerHTML = "題目不要留白~~~";
 		}
 		else{
 			if(exercise_table[(exe_num)]==true){
