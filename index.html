@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to the LS Camp 2017</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="index.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="back-ground blurred"></div>
+	<div class="back-ground unblur"></div>
+	<div class="jumbotron vertical-center">
+		<h1>2017 生科營</h1>
+	</div>
+	<div class="paragraph">
+		<h2>Escape The ROOM</h2>
+		<p>超好玩的密室逃脫在這裡～～～</p>
+
+<!-- Screen -->
+		<div>
+			<div class="list-container">
+				<div id="list"></div>
+			</div>
+			<div class="result-container">
+				<p id="result"></p>
+			</div>
+		</div>
+<!-- Screen -->
+		<div>
+			<div class="">
+				<label class="form-control-label" for="inputSuccess1">題號</label>
+				<input type="text" class="form-control" id="exe_num" value="">
+			</div>
+			<div class="">
+				<label class="form-control-label" for="inputSuccess1">答案</label>
+				<input type="text" class="form-control" id="ans" value="">
+			</div>
+		</div>
+		<p id="score"></p>
+		<br>
+		<div class="container">	
+			<div class="btn1" id="list_btn" onclick="show_list()">
+				<span>LIST</span>
+				<div class="dot"></div>
+			</div>
+			<br>
+			<div class="btn1" id="send" onclick="send_ans()">
+				<span>SEND ANSWER</span>
+				<div class="dot"></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+	var jumboHeight = $('.jumbotron').outerHeight();
+	function parallax(){
+    	var scrolled = $(window).scrollTop();
+    	opacityVal = (scrolled / 150);
+    	$('.blurred').css('opacity', opacityVal);
+    	// $('.back-ground').css('height', (jumboHeight-scrolled) + 'px');
+	}
+
+	$(window).scroll(
+		function(e){
+    		parallax();
+		}
+	);
+	</script>
+	<script type="text/javascript" charset="UTF-8" src="Escape_The_Room/UserInterface/js/UserInterface.js"  ></script>
+</body>
+</html>
