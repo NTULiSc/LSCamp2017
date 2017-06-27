@@ -36,6 +36,25 @@ function show_list(){
 	}
 }
 
+function error(){
+	$("#Error").css("z-index","10");
+	setTimeout(function(){$("#Error").css("opacity","0.8");},100);
+	setTimeout(function(){$("#Error").css("opacity","0.77");},150);
+	setTimeout(function(){$("#Error").css("opacity","0.75");},200);
+	setTimeout(function(){$("#Error").css("opacity","0.72");},250);
+	setTimeout(function(){$("#Error").css("opacity","0.7");},300);
+	setTimeout(function(){$("#Error").css("opacity","0.65");},350);
+	setTimeout(function(){$("#Error").css("opacity","0.6");},400);
+	setTimeout(function(){$("#Error").css("opacity","0.55");},450);
+	setTimeout(function(){$("#Error").css("opacity","0.5");},500);
+	setTimeout(function(){$("#Error").css("opacity","0.4");},550);
+	setTimeout(function(){$("#Error").css("opacity","0.3");},600);
+	setTimeout(function(){$("#Error").css("opacity","0.2");},700);
+	setTimeout(function(){$("#Error").css("opacity","0.1");},800);
+	setTimeout(function(){$("#Error").css("opacity","0.0");},900);
+	setTimeout(function(){$("#Error").css("z-index","-10");},910);	
+}
+
 function print_list(){
 	var text="<table><thead><tr><th>題號</th><th>是否完成</th></tr></thead><tbody>";
 	var greeno = "<p id=green>";
@@ -89,77 +108,85 @@ function send_ans(){
 				print_score();
 			}
 			else{
+				var errormsg="答錯囉!";
+				var successmsg="您答對哩!";
 				switch(exe_num) {
 		case 0:
 	        if(ans === Answer.Ans_1){
 				exercise_table[0]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 1:
 	        if(ans === Answer.Ans_2){
 				exercise_table[1]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 2:
 	        if(ans === Answer.Ans_3){
 				exercise_table[2]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	     case 3:
 	        if(ans === Answer.Ans_4){
 				exercise_table[3]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	     case 4:
 	        if(ans === Answer.Ans_5){
 				exercise_table[4]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 5:
 	        if(ans === Answer.Ans_6){
 				exercise_table[5]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 
@@ -167,84 +194,91 @@ function send_ans(){
 	        if(ans === Answer.Ans_7){
 				exercise_table[6]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 7:
 	        if(ans === Answer.Ans_8){
 				exercise_table[7]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 8:
 	        if(ans === Answer.Ans_9){
 				exercise_table[8]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 9:
 	        if(ans === Answer.Ans_10){
 				exercise_table[9]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 10:
 	        if(ans === Answer.Ans_11){
 				exercise_table[10]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 11:
 	        if(ans === Answer.Ans_12){
 				exercise_table[11]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    case 12:
 	        if(ans === Answer.Ans_13){
 				exercise_table[12]=true;
 				score++;
-				document.getElementById("result").innerHTML = "您答對哩!";
+				document.getElementById("result").innerHTML = successmsg;
 				print_score();
 			}
 			else{
-				document.getElementById("result").innerHTML = "錯錯錯QAQ";
+				document.getElementById("result").innerHTML = errormsg;
 				print_score();
+				error();
 			}
 	        break;
 	    
