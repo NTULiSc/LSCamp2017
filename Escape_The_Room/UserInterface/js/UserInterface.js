@@ -248,15 +248,10 @@ function send_ans(){
 	        document.getElementById("result").innerHTML = "要輸入在題目範圍的數字呦!!!";
 
 					}
-
-		print_list();
-
-
 			}
 		}
-	
 	}
-	
+	print_list();
 
 }
 
