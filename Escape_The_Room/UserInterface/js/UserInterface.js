@@ -1,4 +1,4 @@
-var show_li=1;
+var show_li=0;
 var score=0;
 var num=13;
 //var exercise_table[13];	
@@ -25,14 +25,15 @@ var Answer = {
 
 function show_list(){
 	
-	if(show_li%2==1){
-		$("#list").show();
+	if(show_li==1){
+		$("#list").hide();
+		show_li = 0;
 	}
 	else{
-		$("#list").hide();
+		$("#list").show();
+		print_list();
+		show_li = 1;
 	}
-	show_li++;
-	print_list();
 }
 
 function print_list(){
@@ -63,7 +64,8 @@ function send_ans(){
 	document.getElementById("ans").value = "";
 
 	if(isNaN(exe_num)){
-		if(exe_num === "RUSHANDYANRU" || exe_num === "RushAndYanRu" || exe_num === "rushandyanru" || exe_num === "RUSH-AND-YAN-RU" || exe_num === "rush-and-yan-ru" || exe_num === "RUSH AND YANRU" || exe_num === "rush and yanru"){
+		if(exe_num === "RUSHANDYANRU" || exe_num === "RushAndYanRu" || exe_num === "rushandyanru" || exe_num === "RUSH-AND-YAN-RU" 
+			|| exe_num === "rush-and-yan-ru" || exe_num === "RUSH AND YANRU" || exe_num === "rush and yanru"){
 			score=13;
 			for(i=0;i<exercise_table.length;i++){
 				exercise_table[i]=true;
@@ -251,7 +253,7 @@ function send_ans(){
 			}
 		}
 	}
-	print_list();
+	if(show_li == 1) print_list();
 
 }
 
