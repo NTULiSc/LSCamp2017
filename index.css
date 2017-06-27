@@ -1,3 +1,10 @@
+
+#green{
+    color:lime;
+}
+#red{
+    color:red;
+}
 .unblur{
 	background: url("./back.png") no-repeat center center;
 	background-attachment: fixed;

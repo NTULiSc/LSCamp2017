@@ -38,12 +38,14 @@ function show_list(){
 
 function print_list(){
 	var text="<table><thead><tr><th>題號</th><th>是否完成</th></tr></thead><tbody>";
+	var greeno = "<p id=green>";
+	var redx = "<p id=red>";
 	for(i=0; i<exercise_table.length;i++){
 			if(exercise_table[i]){
-				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + "<center>O</center>" + "</td></tr>";
+				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + greeno +"O</p>" + "</td></tr>";
 			}
 			else{
-				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + "<center>X</center>" + "</td></tr>";
+				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + redx + "X</p>" + "</td></tr>";
 				
 			}
 			
