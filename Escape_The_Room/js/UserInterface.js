@@ -25,8 +25,22 @@ var Answer = {
 	Ans_13:"ans"
 };
 
+$('#exe_num').keypress(function(event) {
+    if (event.keyCode == 13 || event.which == 13) {
+        $('#ans').focus();
+        event.preventDefault();
+    }
+});
+
+$('#ans').keypress(function(event) {
+    if (event.keyCode == 13 || event.which == 13) {
+    	send_ans();
+    	$('#exe_num').focus();
+        event.preventDefault();
+    }
+});
+
 function show_list(){
-	
 	if(show_li==1){
 		$("#list").hide();
 		show_li = 0;
@@ -145,8 +159,11 @@ function send_ans(){
 	}
 	else{
 		exe_num=exe_num-1;
-		if(exe_num<0){
+		if(exe_num = -1){
 			document.getElementById("result").innerHTML = "題目不要留白~~~";
+		}
+		else if(exe_num < (-1) ){
+			document.getElementById("result").innerHTML = "幹你媽有人題目號碼在負的嗎?????";	
 		}
 		else{
 			if(exercise_table[(exe_num)]==true){
