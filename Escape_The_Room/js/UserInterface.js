@@ -138,6 +138,8 @@ function print_score(){
 function send_ans(){
 	var exe_num = (document.getElementById("exe_num").value);
 	var ans = document.getElementById("ans").value;
+	exe_num=exe_num.trim();
+	ans=ans.trim();
 
 	document.getElementById("exe_num").value = "";
 	document.getElementById("ans").value = "";
@@ -159,7 +161,7 @@ function send_ans(){
 	}
 	else{
 		exe_num=exe_num-1;
-		if(exe_num = -1){
+		if(exe_num < 0){
 			document.getElementById("result").innerHTML = "題目不要留白~~~";
 		}
 		else if(exe_num < (-1) ){
