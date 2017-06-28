@@ -159,10 +159,13 @@ function send_ans(){
 			document.getElementById("result").innerHTML = "您輸入的不是數字喔!ㄎㄎ!";
 		}
 	}
+	else if(exe_num === ""){
+		document.getElementById("result").innerHTML = "題目不要留白~~~";
+	}
 	else{
 		exe_num=exe_num-1;
 		if(exe_num === -1){
-			document.getElementById("result").innerHTML = "題目不要留白~~~";
+			document.getElementById("result").innerHTML = "第0題!? 您應該讀資工系!!!";
 		}
 		else if(exe_num < -1 ){
 			document.getElementById("result").innerHTML = "幹你媽有人題目號碼在負的嗎?????";	
