@@ -1,6 +1,8 @@
 var show_li=0;
 var score=0;
 var num=13;
+var PrtWan = 0;			// 0 stands for Red Warning, 1 stands for Green Warning
+
 //var exercise_table[13];	
 var exercise_table = new Array(num);
 for(i=0;i<num;i++){
@@ -36,23 +38,36 @@ function show_list(){
 	}
 }
 
-function error(){
-	$("#Error").css("z-index","10");
-	setTimeout(function(){$("#Error").css("opacity","0.8");},100);
-	setTimeout(function(){$("#Error").css("opacity","0.77");},150);
-	setTimeout(function(){$("#Error").css("opacity","0.75");},200);
-	setTimeout(function(){$("#Error").css("opacity","0.72");},250);
-	setTimeout(function(){$("#Error").css("opacity","0.7");},300);
-	setTimeout(function(){$("#Error").css("opacity","0.65");},350);
-	setTimeout(function(){$("#Error").css("opacity","0.6");},400);
-	setTimeout(function(){$("#Error").css("opacity","0.55");},450);
-	setTimeout(function(){$("#Error").css("opacity","0.5");},500);
-	setTimeout(function(){$("#Error").css("opacity","0.4");},550);
-	setTimeout(function(){$("#Error").css("opacity","0.3");},600);
-	setTimeout(function(){$("#Error").css("opacity","0.2");},700);
-	setTimeout(function(){$("#Error").css("opacity","0.1");},800);
-	setTimeout(function(){$("#Error").css("opacity","0.0");},900);
-	setTimeout(function(){$("#Error").css("z-index","-10");},910);	
+function Wan(){
+	$("#Warning").css("z-index","10");
+	setTimeout(function(){$("#Warning").css("opacity","0.8");},100);
+	setTimeout(function(){$("#Warning").css("opacity","0.77");},150);
+	setTimeout(function(){$("#Warning").css("opacity","0.75");},200);
+	setTimeout(function(){$("#Warning").css("opacity","0.72");},250);
+	setTimeout(function(){$("#Warning").css("opacity","0.7");},300);
+	setTimeout(function(){$("#Warning").css("opacity","0.65");},350);
+	setTimeout(function(){$("#Warning").css("opacity","0.6");},400);
+	setTimeout(function(){$("#Warning").css("opacity","0.55");},450);
+	setTimeout(function(){$("#Warning").css("opacity","0.5");},500);
+	setTimeout(function(){$("#Warning").css("opacity","0.4");},550);
+	setTimeout(function(){$("#Warning").css("opacity","0.3");},600);
+	setTimeout(function(){$("#Warning").css("opacity","0.2");},700);
+	setTimeout(function(){$("#Warning").css("opacity","0.1");},800);
+	setTimeout(function(){$("#Warning").css("opacity","0.0");},900);
+	// $("#Congra").css("z-index","-11");
+}
+function PrintWan(){
+	if( PrtWan === 0){
+		Wan();
+		setTimeout(function(){$("#Warning").css("z-index","-10");},910);
+	}
+	else{
+		$("#Warning").css("background","lime");
+		Wan();
+		setInterval( function(){
+			Wan();
+		}, 900);
+	}
 }
 
 function print_list(){
@@ -75,7 +90,11 @@ function print_list(){
 	}
 function print_score(){
 	document.getElementById("score").innerHTML = "目前分數為 : " + score;
-	if(score == 13) document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
+	if(score == 13){
+		document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
+		PrtWan = 1;
+		PrintWan();
+	}
 }
 
 function send_ans(){
@@ -93,6 +112,8 @@ function send_ans(){
 				exercise_table[i]=true;
 			}
 			document.getElementById("result").innerHTML = "你已經贏了(By 開外掛~~~";
+			PrtWan = 1;
+			PrintWan();
 		}
 		else{
 			document.getElementById("result").innerHTML = "您輸入的不是數字喔!ㄎㄎ!";
@@ -122,7 +143,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 1:
@@ -135,7 +156,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 2:
@@ -148,7 +169,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	     case 3:
@@ -161,7 +182,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	     case 4:
@@ -174,7 +195,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 5:
@@ -187,7 +208,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 
@@ -201,7 +222,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 7:
@@ -214,7 +235,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 8:
@@ -227,7 +248,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 9:
@@ -240,7 +261,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 10:
@@ -253,7 +274,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 11:
@@ -266,7 +287,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    case 12:
@@ -279,7 +300,7 @@ function send_ans(){
 			else{
 				document.getElementById("result").innerHTML = errormsg;
 				print_score();
-				error();
+				PrintWan();
 			}
 	        break;
 	    
