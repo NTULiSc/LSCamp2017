@@ -10,7 +10,7 @@
 	z-index: -2;
 }
 .blurred{
-	background: url("../images/back-blurred.png") no-repeat center center;
+	background: url("../images/back-blurred.jpg") no-repeat center center;
 	background-attachment: fixed;
 	opacity: 0;
 	z-index: -1;
