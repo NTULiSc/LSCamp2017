@@ -43,10 +43,19 @@ function closeMe()
     /*window.opener = self;*/
     window.close();
 }
+$(document).ready(
+	function(){
+		$(".quit").hover(function(){
+				$("#Warning").css("z-index","-20");
+			},function(){
+				$("#Warning").css("z-index","20");
+			});
+});
+
 
 
 function Wan(){
-	$("#Warning").css("z-index","10");
+	
 	setTimeout(function(){$("#Warning").css("opacity","0.5");},100);
 	setTimeout(function(){$("#Warning").css("opacity","0.45");},150);
 	setTimeout(function(){$("#Warning").css("opacity","0.42");},200);
@@ -64,7 +73,9 @@ function Wan(){
 	// $("#Congra").css("z-index","-11");
 }
 function PrintWan(){
+	
 	if( PrtWan === 0){
+		$("#Warning").css("z-index","10"); 
 		Wan();
 		setTimeout(function(){$("#Warning").css("z-index","-10");},910);
 	}
@@ -72,10 +83,13 @@ function PrintWan(){
 		$("#Warning").css("background","lime");
 		$(".quit").css("display","inline");
 		$(".quit").css("z-index","20");
+		$("#Warning").css("z-index","10"); 
 		Wan();
 		setInterval( function(){
 			Wan();
+			
 		}, 900);
+		
 	}
 }
 
