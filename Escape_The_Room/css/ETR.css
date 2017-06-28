@@ -16,6 +16,9 @@
 #red{
     color:red;
 }
+.quit{
+    display:none;
+}
 .unblur{
 	background: url("../images/back.png") no-repeat center center;
 	background-attachment: fixed;

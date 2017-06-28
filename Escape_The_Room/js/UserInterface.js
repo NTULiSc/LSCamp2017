@@ -38,6 +38,13 @@ function show_list(){
 	}
 }
 
+function closeMe()
+{
+    /*window.opener = self;*/
+    window.close();
+}
+
+
 function Wan(){
 	$("#Warning").css("z-index","10");
 	setTimeout(function(){$("#Warning").css("opacity","0.8");},100);
@@ -63,6 +70,7 @@ function PrintWan(){
 	}
 	else{
 		$("#Warning").css("background","lime");
+		$(".quit").css("display","block");
 		Wan();
 		setInterval( function(){
 			Wan();
