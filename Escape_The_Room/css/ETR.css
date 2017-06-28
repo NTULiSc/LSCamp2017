@@ -43,11 +43,11 @@
     align-items:center;
 }
 .jumbotron h1{
-	color: skyblue;
+	color: #78FFCD;
 }
 .paragraph{
     width: 100%;
-	color: skyblue;
+	color: #78FFCD;
 	background-color: transparent;
 	text-align: center;
 }
