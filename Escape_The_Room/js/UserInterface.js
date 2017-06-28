@@ -161,10 +161,10 @@ function send_ans(){
 	}
 	else{
 		exe_num=exe_num-1;
-		if(exe_num < 0){
+		if(exe_num === -1){
 			document.getElementById("result").innerHTML = "題目不要留白~~~";
 		}
-		else if(exe_num < (-1) ){
+		else if(exe_num < -1 ){
 			document.getElementById("result").innerHTML = "幹你媽有人題目號碼在負的嗎?????";	
 		}
 		else{
