@@ -47,18 +47,18 @@ function closeMe()
 
 function Wan(){
 	$("#Warning").css("z-index","10");
-	setTimeout(function(){$("#Warning").css("opacity","0.8");},100);
-	setTimeout(function(){$("#Warning").css("opacity","0.77");},150);
-	setTimeout(function(){$("#Warning").css("opacity","0.75");},200);
-	setTimeout(function(){$("#Warning").css("opacity","0.72");},250);
-	setTimeout(function(){$("#Warning").css("opacity","0.7");},300);
-	setTimeout(function(){$("#Warning").css("opacity","0.65");},350);
-	setTimeout(function(){$("#Warning").css("opacity","0.6");},400);
-	setTimeout(function(){$("#Warning").css("opacity","0.55");},450);
-	setTimeout(function(){$("#Warning").css("opacity","0.5");},500);
-	setTimeout(function(){$("#Warning").css("opacity","0.4");},550);
-	setTimeout(function(){$("#Warning").css("opacity","0.3");},600);
-	setTimeout(function(){$("#Warning").css("opacity","0.2");},700);
+	setTimeout(function(){$("#Warning").css("opacity","0.5");},100);
+	setTimeout(function(){$("#Warning").css("opacity","0.45");},150);
+	setTimeout(function(){$("#Warning").css("opacity","0.42");},200);
+	setTimeout(function(){$("#Warning").css("opacity","0.40");},250);
+	setTimeout(function(){$("#Warning").css("opacity","0.38");},300);
+	setTimeout(function(){$("#Warning").css("opacity","0.35");},350);
+	setTimeout(function(){$("#Warning").css("opacity","0.32");},400);
+	setTimeout(function(){$("#Warning").css("opacity","0.30");},450);
+	setTimeout(function(){$("#Warning").css("opacity","0.27");},500);
+	setTimeout(function(){$("#Warning").css("opacity","0.25");},550);
+	setTimeout(function(){$("#Warning").css("opacity","0.22");},600);
+	setTimeout(function(){$("#Warning").css("opacity","0.18");},700);
 	setTimeout(function(){$("#Warning").css("opacity","0.1");},800);
 	setTimeout(function(){$("#Warning").css("opacity","0.0");},900);
 	// $("#Congra").css("z-index","-11");
@@ -70,7 +70,8 @@ function PrintWan(){
 	}
 	else{
 		$("#Warning").css("background","lime");
-		$(".quit").css("display","block");
+		$(".quit").css("display","inline");
+		$(".quit").css("z-index","20");
 		Wan();
 		setInterval( function(){
 			Wan();

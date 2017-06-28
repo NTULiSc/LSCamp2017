@@ -18,7 +18,13 @@
 }
 .quit{
     display:none;
+    z-index: -5;
+    margin:auto;
+    position: fixed;
+    top: 50%;
+
 }
+
 .unblur{
 	background: url("../images/back.png") no-repeat center center;
 	background-attachment: fixed;
