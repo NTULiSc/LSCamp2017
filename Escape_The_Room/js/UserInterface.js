@@ -40,8 +40,9 @@ function show_list(){
 
 function closeMe()
 {
-    /*window.opener = self;*/
-    window.close();
+    // window.opener = self;
+    // window.close();
+    window.location.reload(false);
 }
 $(document).ready(
 	function(){
@@ -81,7 +82,7 @@ function PrintWan(){
 	}
 	else{
 		$("#Warning").css("background","lime");
-		$(".quit").css("display","inline");
+		$(".quit").css("display","block");
 		$(".quit").css("z-index","20");
 		$("#Warning").css("z-index","10"); 
 		Wan();
