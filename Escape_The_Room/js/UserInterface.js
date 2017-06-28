@@ -75,6 +75,7 @@ function print_list(){
 	}
 function print_score(){
 	document.getElementById("score").innerHTML = "目前分數為 : " + score;
+	if(score == 13) document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
 }
 
 function send_ans(){
