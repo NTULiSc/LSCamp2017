@@ -27,7 +27,7 @@ int main(){
 	for(int k = 0; k < Badge.size(); k++){
 		if(k == SIZE-1){
 			if(k != 0) cout << "</a></h4>\n";
-			cout << "<h4 id=\"Hint" << Count << "\"><a href=\"" << urls[0] << "\">\n";
+			cout << "<h4 class=\"Hint\" id=\"Hint" << Count << "\"><a href=\"" << urls[0] << "\" target=\"_blank\">\n";
 			cout << "\t<span class=\"char" << k << "\">" << Badge[k] << "</span>\n";
 			Count++;
 			if(Count < 5) SIZE += urls[Count].size()+SpNum;
