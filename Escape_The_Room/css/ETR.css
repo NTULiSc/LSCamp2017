@@ -43,11 +43,19 @@
 
 /*HINT BADGE*/
 .Badge {
-    margin: 0 auto;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    width: 75%;
+    height: 75%;
     position: absolute;
-    width: 50%;
-    height: 50%;
-    z-index: -20;
+    left: 50%;
+    
 }
 h4 span{
     font-family: 'PT Mono', monospace;
@@ -57,19 +65,19 @@ h4 span{
     transform-origin: bottom center;
 }
 #Hint0{
-    z-index: -20;
+    z-index: -25;
 }
 #Hint1{
-    z-index: -20;
+    z-index: -25;
 }
 #Hint2{
-    z-index: -20;
+    z-index: -25;
 }
 #Hint3{
-    z-index: -20;
+    z-index: -25;
 }
 #Hint4{
-    z-index: -20;
+    z-index: -25;
 }
 .char0{ transform: rotate(3deg);}
 .char1{ transform: rotate(6deg);}
@@ -298,6 +306,7 @@ table th{
     font-size: 1.3em;
     line-height: 2em;
     cursor: pointer;
+    z-index: -25;
 }
 .dotH {
     content: '';

@@ -132,22 +132,22 @@ function print_score(){
 	document.getElementById("score").innerHTML = "目前分數為 : " + score;
 	switch(score){
 		case 0:
-			$(".Badge").css("z-index","-20"); 
 			break;
 		case 2:
-			$("#Hint0").css("z-index","5"); 
+			$("#Hint0").css("z-index","0");
+			$(".HINT").css("z-index","0");
 			break;
 		case 4:
-			$("#Hint1").css("z-index","5"); 
+			$("#Hint1").css("z-index","0"); 
 			break;
 		case 6:
-			$("#Hint2").css("z-index","5"); 
+			$("#Hint2").css("z-index","0"); 
 			break;
 		case 8:
-			$("#Hint3").css("z-index","5"); 
+			$("#Hint3").css("z-index","0"); 
 			break;
 		case 10:
-			$("#Hint4").css("z-index","5"); 
+			$("#Hint4").css("z-index","0"); 
 			break;
 		default:
 			break;
