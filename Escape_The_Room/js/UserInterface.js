@@ -61,21 +61,6 @@ function show_list(){
 	}
 }
 
-function closeMe()
-{
-    // window.opener = self;
-    // window.close();
-    window.location.reload(false);
-}
-$(document).ready(
-	function(){
-		$(".quit").hover(function(){
-				$("#Warning").css("z-index","-20");
-			},function(){
-				$("#Warning").css("z-index","20");
-			});
-});
-
 function Wan(){
 	setTimeout(function(){$("#Warning").css("opacity","0.5");},100);
 	setTimeout(function(){$("#Warning").css("opacity","0.45");},150);
@@ -91,25 +76,18 @@ function Wan(){
 	setTimeout(function(){$("#Warning").css("opacity","0.18");},700);
 	setTimeout(function(){$("#Warning").css("opacity","0.1");},800);
 	setTimeout(function(){$("#Warning").css("opacity","0.0");},900);
+	setTimeout(function(){$("#Warning").css("z-index","-10");},910);
 }
 function PrintWan(){
 	
 	if( PrtWan === 0){
 		$("#Warning").css("z-index","10"); 
 		Wan();
-		setTimeout(function(){$("#Warning").css("z-index","-10");},910);
 	}
 	else{
 		$("#Warning").css("background","lime");
-		$(".quit").css("display","block");
-		$(".quit").css("z-index","20");
-		$("#Warning").css("z-index","10"); 
 		Wan();
-		setInterval( function(){
-			Wan();
-			
-		}, 900);
-		
+		document.getElementById("HINT").innerHTML = "離開";
 	}
 }
 
@@ -159,8 +137,9 @@ function print_score(){
 	}
 }
 
-function show_hint(){
-	$('html,body').scrollTop(0);
+function hint_or_exit(){
+	if(score != 10) $('html,body').scrollTop(0);
+	else window.location.reload(false);
 }
 
 function send_ans(){
