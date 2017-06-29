@@ -1,6 +1,6 @@
 var show_li=0;
 var score=0;
-var num=13;
+var num=10;
 var PrtWan = 0;			// 0 stands for Red Warning, 1 stands for Green Warning
 
 //var exercise_table[13];	
@@ -19,10 +19,7 @@ var Answer = {
 	Ans_7:"ans",
 	Ans_8:"ans",
 	Ans_9:"ans",
-	Ans_10:"ans",
-	Ans_11:"ans",
-	Ans_12:"ans",
-	Ans_13:"ans"
+	Ans_10:"ans"
 };
 
 $('#exe_num').keypress(function(event) {
@@ -66,8 +63,6 @@ $(document).ready(
 				$("#Warning").css("z-index","20");
 			});
 });
-
-
 
 function Wan(){
 	
@@ -128,7 +123,7 @@ function print_list(){
 	}
 function print_score(){
 	document.getElementById("score").innerHTML = "目前分數為 : " + score;
-	if(score == 13){
+	if(score == 10){
 		document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
 		PrtWan = 1;
 		PrintWan();
@@ -144,10 +139,10 @@ function send_ans(){
 	document.getElementById("exe_num").value = "";
 	document.getElementById("ans").value = "";
 
-	if(isNaN(exe_num)){
+	if(isNaN(exe_num)){				//If input is not number
 		if(exe_num === "RUSHANDYANRU" || exe_num === "RushAndYanRu" || exe_num === "rushandyanru" || exe_num === "RUSH-AND-YAN-RU" 
 			|| exe_num === "rush-and-yan-ru" || exe_num === "RUSH AND YANRU" || exe_num === "rush and yanru"){
-			score=13;
+			score=10;
 			for(i=0;i<exercise_table.length;i++){
 				exercise_table[i]=true;
 			}
@@ -162,7 +157,7 @@ function send_ans(){
 	else if(exe_num === ""){
 		document.getElementById("result").innerHTML = "題目不要留白~~~";
 	}
-	else{
+	else{							//If input is number
 		exe_num=exe_num-1;
 		if(exe_num === -1){
 			document.getElementById("result").innerHTML = "第0題!? 您應該讀資工系!!!";
@@ -310,7 +305,7 @@ function send_ans(){
 				PrintWan();
 			}
 	        break;
-	    case 10:
+	    /*case 10:
 	        if(ans === Answer.Ans_11){
 				exercise_table[10]=true;
 				score++;
@@ -348,8 +343,7 @@ function send_ans(){
 				print_score();
 				PrintWan();
 			}
-	        break;
-	    
+	        break;*/
 	    default:
 	        document.getElementById("result").innerHTML = "要輸入在題目範圍的數字呦!!!";
 
