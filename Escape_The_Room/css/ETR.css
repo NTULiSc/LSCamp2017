@@ -10,13 +10,6 @@
     opacity: 0.0;
 }
 
-#green{
-    color:lime;
-}
-#red{
-    color:red;
-}
-
 .unblur{
 	background: url("../images/back.png") no-repeat center center;
 	background-attachment: fixed;

@@ -8,6 +8,18 @@ var exercise_table = new Array(num);
 for(i=0;i<num;i++){
 	exercise_table[i]=false;
 }
+var exercise_name_table = [
+	"撲克牌",			// 1
+	"便條紙",			// 2
+	"燈與圖形",			// 3
+	"摩斯密碼",			// 4
+	"三排數字紙",			// 5
+	"暗號紙",			// 6
+	"BOH卡",				// 7
+	"國旗卡",			// 8
+	"一首英文詩",			// 9
+	"鍵盤資訊"			// 10
+];
 
 var Answer = {
 	Ans_1:"ans",
@@ -104,16 +116,15 @@ function PrintWan(){
 }
 
 function print_list(){
-	var text="<table><thead><tr><th>題號</th><th>是否完成</th></tr></thead><tbody>";
-	var greeno = "<p id=green>";
-	var redx = "<p id=red>";
+	var text="<table><thead><tr><th>題號</th><th>名稱</th><th></th><th></th><th>是否完成</th><th></th></tr></thead><tbody>";
 	for(i=0; i<exercise_table.length;i++){
 			if(exercise_table[i]){
-				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + greeno +"O</p>" + "</td></tr>";
+				text += "<tr><td>"+(i+1)+"</td><th>"+exercise_name_table[i]+"</th><th></th><th></th><td><p style=\"color:lime;\">O</p></td><th></th></tr>"
+				// text += "<tr><td><center>" + (i+1) + "</center></td><td>"+ "haha" + "</td><td><p style=\"color:lime;\">O</p></td></tr>";
 			}
 			else{
-				text += "<tr><td><center>" + (i+1) + "</center></td><td>" + redx + "X</p>" + "</td></tr>";
-				
+				text += "<tr><td>"+(i+1)+"</td><th>"+exercise_name_table[i]+"</th><th></th><th></th><td><p style=\"color:red;\">X</p></td><th></th></tr>"
+				// text += "<tr><td><center>" + (i+1) + "</center></td><td>"+ "hehe" + "</td><td><p style=\"color:red;\">X</p></td></tr>";
 			}
 			
 		}
