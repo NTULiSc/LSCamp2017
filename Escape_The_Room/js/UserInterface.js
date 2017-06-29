@@ -77,7 +77,6 @@ $(document).ready(
 });
 
 function Wan(){
-	
 	setTimeout(function(){$("#Warning").css("opacity","0.5");},100);
 	setTimeout(function(){$("#Warning").css("opacity","0.45");},150);
 	setTimeout(function(){$("#Warning").css("opacity","0.42");},200);
@@ -92,7 +91,6 @@ function Wan(){
 	setTimeout(function(){$("#Warning").css("opacity","0.18");},700);
 	setTimeout(function(){$("#Warning").css("opacity","0.1");},800);
 	setTimeout(function(){$("#Warning").css("opacity","0.0");},900);
-	// $("#Congra").css("z-index","-11");
 }
 function PrintWan(){
 	
@@ -120,11 +118,9 @@ function print_list(){
 	for(i=0; i<exercise_table.length;i++){
 			if(exercise_table[i]){
 				text += "<tr><td>"+(i+1)+"</td><th>"+exercise_name_table[i]+"</th><th></th><th></th><td><p style=\"color:lime;\">O</p></td><th></th></tr>"
-				// text += "<tr><td><center>" + (i+1) + "</center></td><td>"+ "haha" + "</td><td><p style=\"color:lime;\">O</p></td></tr>";
 			}
 			else{
 				text += "<tr><td>"+(i+1)+"</td><th>"+exercise_name_table[i]+"</th><th></th><th></th><td><p style=\"color:red;\">X</p></td><th></th></tr>"
-				// text += "<tr><td><center>" + (i+1) + "</center></td><td>"+ "hehe" + "</td><td><p style=\"color:red;\">X</p></td></tr>";
 			}
 			
 		}
@@ -134,11 +130,37 @@ function print_list(){
 	}
 function print_score(){
 	document.getElementById("score").innerHTML = "目前分數為 : " + score;
+	switch(score){
+		case 0:
+			$(".Badge").css("z-index","-20"); 
+			break;
+		case 2:
+			$("#Hint0").css("z-index","5"); 
+			break;
+		case 4:
+			$("#Hint1").css("z-index","5"); 
+			break;
+		case 6:
+			$("#Hint2").css("z-index","5"); 
+			break;
+		case 8:
+			$("#Hint3").css("z-index","5"); 
+			break;
+		case 10:
+			$("#Hint4").css("z-index","5"); 
+			break;
+		default:
+			break;
+	}
 	if(score == 10){
 		document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
 		PrtWan = 1;
 		PrintWan();
 	}
+}
+
+function show_hint(){
+	$('html,body').scrollTop(0);
 }
 
 function send_ans(){
@@ -174,7 +196,7 @@ function send_ans(){
 			document.getElementById("result").innerHTML = "第0題!? 您應該讀資工系!!!";
 		}
 		else if(exe_num < -1 ){
-			document.getElementById("result").innerHTML = "幹你媽有人題目號碼在負的嗎?????";	
+			document.getElementById("result").innerHTML = "幹你媽有人題目號碼在負的嗎???";	
 		}
 		else{
 			if(exercise_table[(exe_num)]==true){
@@ -316,45 +338,6 @@ function send_ans(){
 				PrintWan();
 			}
 	        break;
-	    /*case 10:
-	        if(ans === Answer.Ans_11){
-				exercise_table[10]=true;
-				score++;
-				document.getElementById("result").innerHTML = successmsg;
-				print_score();
-			}
-			else{
-				document.getElementById("result").innerHTML = errormsg;
-				print_score();
-				PrintWan();
-			}
-	        break;
-	    case 11:
-	        if(ans === Answer.Ans_12){
-				exercise_table[11]=true;
-				score++;
-				document.getElementById("result").innerHTML = successmsg;
-				print_score();
-			}
-			else{
-				document.getElementById("result").innerHTML = errormsg;
-				print_score();
-				PrintWan();
-			}
-	        break;
-	    case 12:
-	        if(ans === Answer.Ans_13){
-				exercise_table[12]=true;
-				score++;
-				document.getElementById("result").innerHTML = successmsg;
-				print_score();
-			}
-			else{
-				document.getElementById("result").innerHTML = errormsg;
-				print_score();
-				PrintWan();
-			}
-	        break;*/
 	    default:
 	        document.getElementById("result").innerHTML = "要輸入在題目範圍的數字呦!!!";
 
