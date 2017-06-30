@@ -22,6 +22,17 @@ var exercise_name_table = [
 ];
 
 var Answer = {
+	/*Ans_1:"3438",
+	Ans_2:"9652",
+	Ans_3:"8039",
+	Ans_4:"1029384756",
+	Ans_5:"131",
+	Ans_6:"432",
+	Ans_7:"10130",
+	Ans_8:"612",
+	Ans_9:"48713",
+	Ans_10:"297"*/
+
 	Ans_1:"ans",
 	Ans_2:"ans",
 	Ans_3:"ans",
@@ -31,7 +42,7 @@ var Answer = {
 	Ans_7:"ans",
 	Ans_8:"ans",
 	Ans_9:"ans",
-	Ans_10:"ans"
+	Ans_10:"ans"	
 };
 
 $('#exe_num').keypress(function(event) {
@@ -62,6 +73,7 @@ function show_list(){
 }
 
 function Wan(){
+	setTimeout(function(){$("#Warning").css("z-index","10");},90);
 	setTimeout(function(){$("#Warning").css("opacity","0.5");},100);
 	setTimeout(function(){$("#Warning").css("opacity","0.45");},150);
 	setTimeout(function(){$("#Warning").css("opacity","0.42");},200);
@@ -78,17 +90,21 @@ function Wan(){
 	setTimeout(function(){$("#Warning").css("opacity","0.0");},900);
 	setTimeout(function(){$("#Warning").css("z-index","-10");},910);
 }
+
 function PrintWan(){
-	
-	if( PrtWan === 0){
-		$("#Warning").css("z-index","10"); 
-		Wan();
+	if( PrtWan === 0){								//For wrong answer
+		$("#Warning").css("background","rgba(229, 46, 5,0.5)");
+		// $("#Warning").css("z-index","10"); 
 	}
-	else{
+	else if( PrtWan === 1){							//For every hint showing
 		$("#Warning").css("background","lime");
-		Wan();
+	}
+	else{											//For done all the answers
+		$("#Warning").css("background","lime");
 		document.getElementById("HINT").innerHTML = "離開";
 	}
+	Wan();
+	PrtWan = 0;
 }
 
 function print_list(){
@@ -114,26 +130,32 @@ function print_score(){
 		case 2:
 			$("#Hint0").css("z-index","0");
 			$(".HINT").css("z-index","0");
+			PrtWan = 1;
+			PrintWan();
 			break;
 		case 4:
 			$("#Hint1").css("z-index","0"); 
+			PrtWan = 1;
+			PrintWan();
 			break;
 		case 6:
-			$("#Hint2").css("z-index","0"); 
+			$("#Hint2").css("z-index","0");
+			PrtWan = 1;
+			PrintWan();
 			break;
 		case 8:
-			$("#Hint3").css("z-index","0"); 
+			$("#Hint3").css("z-index","0");
+			PrtWan = 1;
+			PrintWan();
 			break;
 		case 10:
-			$("#Hint4").css("z-index","0"); 
+			$("#Hint4").css("z-index","0");
+			document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
+			PrtWan = 2;
+			PrintWan();
 			break;
 		default:
 			break;
-	}
-	if(score == 10){
-		document.getElementById("result").innerHTML = "恭喜你已經完成所有題目!!!";
-		PrtWan = 1;
-		PrintWan();
 	}
 }
 
@@ -159,7 +181,7 @@ function send_ans(){
 				exercise_table[i]=true;
 			}
 			document.getElementById("result").innerHTML = "你已經贏了(By 開外掛~~~";
-			PrtWan = 1;
+			PrtWan = 2;
 			PrintWan();
 		}
 		else{
