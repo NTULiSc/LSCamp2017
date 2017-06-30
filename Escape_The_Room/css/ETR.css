@@ -45,17 +45,17 @@
 .Badge {
     top:0;
     bottom: 0;
-    left: 0;
     right: 0;
     margin: auto;
     display: flex;
-    /*align-items: center;
-    justify-content: center;*/
-    width: 75%;
-    height: 75%;
+    width: 50%;
+    height: 90%;
     position: absolute;
     left: 50%;
     
+}
+h4 {
+    font-size: 25px;
 }
 h4 span{
     font-family: 'PT Mono', monospace;
@@ -84,12 +84,12 @@ a {
     text-decoration: none;
 }
 .Hint a{
-    color: #78FFCD;
-    background-color: #222222;
+    color: #fff;
+    text-shadow: 0 0 10px #fff, 0 0 30px #78FFCD, 0 0 40px #78FFCD;
 }
 .Hint a:hover {
-    color: #fff;
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #78FFCD, 0 0 70px #78FFCD, 0 0 80px #78FFCD, 0 0 100px #78FFCD, 0 0 150px #78FFCD;
+    color: #78FFCD;
+    text-shadow: none;
 }
 .char0{ transform: rotate(3deg);}
 .char1{ transform: rotate(6deg);}
