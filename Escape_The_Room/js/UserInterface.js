@@ -42,7 +42,7 @@ var Answer = {
 	Ans_7:"ans",
 	Ans_8:"ans",
 	Ans_9:"ans",
-	Ans_10:"ans"*/	
+	Ans_10:"ans"	*/
 };
 
 $('#exe_num').keypress(function(event) {
