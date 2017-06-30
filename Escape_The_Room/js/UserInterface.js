@@ -22,7 +22,7 @@ var exercise_name_table = [
 ];
 
 var Answer = {
-	/*Ans_1:"3438",
+	Ans_1:"3438",
 	Ans_2:"9652",
 	Ans_3:"8039",
 	Ans_4:"1029384756",
@@ -31,9 +31,9 @@ var Answer = {
 	Ans_7:"10130",
 	Ans_8:"612",
 	Ans_9:"48713",
-	Ans_10:"297"*/
+	Ans_10:"297"
 
-	Ans_1:"ans",
+	/*Ans_1:"ans",
 	Ans_2:"ans",
 	Ans_3:"ans",
 	Ans_4:"ans",
@@ -42,7 +42,7 @@ var Answer = {
 	Ans_7:"ans",
 	Ans_8:"ans",
 	Ans_9:"ans",
-	Ans_10:"ans"	
+	Ans_10:"ans"*/	
 };
 
 $('#exe_num').keypress(function(event) {
