@@ -233,7 +233,7 @@ body {
     align-items: center;
     flex-flow: wrap;
     font-size: 20px;
-    font-family: 'Titillium Web', sans-serif, Meiryo, "微軟正黑體", "Microsoft JhengHei";
+    font-family: 'Meiryo', "微軟正黑體", "Microsoft JhengHei", 'Titillium Web', sans-serif;
     color: white;
 }
 
@@ -432,7 +432,7 @@ table th{
     background: #78FFCD;
     color: #78FFCD;
     font-weight: 400;
-    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif, Meiryo, "微軟正黑體", "Microsoft JhengHei";
+    font-family: 'Meiryo', "微軟正黑體", "Microsoft JhengHei", 'Titillium Web', sans-serif;
     -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
