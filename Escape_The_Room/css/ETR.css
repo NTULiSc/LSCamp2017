@@ -233,7 +233,7 @@ body {
     align-items: center;
     flex-flow: wrap;
     font-size: 20px;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif, Meiryo, "微軟正黑體", "Microsoft JhengHei";
     color: white;
 }
 
@@ -432,7 +432,7 @@ table th{
     background: #78FFCD;
     color: #78FFCD;
     font-weight: 400;
-    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif, Meiryo, "微軟正黑體", "Microsoft JhengHei";
     -webkit-appearance: none; /* for box shadows to show on iOS */
 }
 
