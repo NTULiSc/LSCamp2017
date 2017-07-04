@@ -4,9 +4,10 @@
 using namespace std;
 
 int main(){
-	int SpNum, Count=0, SIZE=1;
+	int SpNum, Count=0, SIZE=0;
 	string url, Badge;
 	vector<string> urls;
+	float deg;
 
 	// cout << "Please enter the space number between two urls\n";
 	cin >> SpNum;
@@ -25,12 +26,12 @@ int main(){
 
 	cout << "For html :\n";
 	for(int k = 0; k < Badge.size(); k++){
-		if(k == SIZE-1){
+		if(k == SIZE){
 			if(k != 0) cout << "</a></h4>\n";
-			cout << "<h4 class=\"Hint\" id=\"Hint" << Count << "\"><a href=\"" << urls[k] << "\" target=\"_blank\">\n";
+			cout << "<h4 class=\"Hint\" id=\"Hint" << Count << "\"><a href=\"" << urls[Count] << "\" target=\"_blank\">\n";
 			cout << "\t<span class=\"char" << k << "\">" << Badge[k] << "</span>\n";
 			Count++;
-			if(Count < 5) SIZE += urls[Count].size()+SpNum;
+			if(Count < 5) SIZE += urls[Count-1].size()+SpNum;
 		}
 		else cout << "\t<span class=\"char" << k << "\">" << Badge[k] << "</span>\n";
 		if( k == Badge.size()-1 ) cout << "</a></h4>\n";
@@ -38,7 +39,8 @@ int main(){
 
 	cout << "\nFor css : \n";
 	for(int l = 0; l < Badge.size(); l++){
-		cout << ".char" << l <<  "{ transform: rotate(" << (l+1)*( 360/Badge.size() ) << "deg);}\n";
+		deg = (l+1)*( (float)360/(float)Badge.size() );
+		cout << ".char" << l <<  "{ transform: rotate(" << deg << "deg);}\n";
 	}
 	return 0;
 }
